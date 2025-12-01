@@ -1,0 +1,91 @@
+:root {
+  --tg-bg: var(--tg-theme-bg-color, #ffffff);
+  --tg-text: var(--tg-theme-text-color, #000000);
+  --tg-hint: var(--tg-theme-hint-color, #999999);
+  --tg-button: var(--tg-theme-button-color, #2481cc);
+  --tg-button-text: var(--tg-theme-button-text-color, #ffffff);
+
+  --radius: 14px;
+  --border: 1px solid rgba(0, 0, 0, 0.05);
+  --shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--tg-bg);
+  font-family: system-ui, sans-serif;
+  color: var(--tg-text);
+}
+
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.card {
+  background: var(--tg-bg);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 18px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: var(--border);
+  background: var(--tg-bg);
+  color: var(--tg-text);
+  font-size: 16px;
+  outline: none;
+}
+
+textarea:focus {
+  box-shadow: 0 0 0 2px rgba(36, 129, 204, 0.2);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  text-align: center;
+  background: var(--tg-button);
+  color: var(--tg-button-text);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  margin-top: 12px;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.file-input {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--tg-bg);
+  margin-top: 12px;
+  cursor: pointer;
+}
