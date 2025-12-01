@@ -7,15 +7,18 @@ export default function TextTask() {
   const handleSend = async () => {
     if (!text.trim()) return;
 
-    window.Telegram.WebApp.MainButton.text = "⏳ Решаю...";
-    window.Telegram.WebApp.MainButton.show();
-    window.Telegram.WebApp.MainButton.showProgress();
+    const tg = window.Telegram.WebApp;
+    tg.MainButton.text = "⏳ Решаю...";
+    tg.MainButton.show();
+    tg.MainButton.showProgress();
 
     const res = await sendText(text);
 
-    window.Telegram.WebApp.MainButton.hide();
+    tg.MainButton.hide();
 
-    window.Telegram.WebApp.showAlert(res.reply || "Готово!");
+    const reply = res?.data?.reply;
+    tg.showAlert(reply ? reply : "⚠️ Пустой ответ от сервера");
+
     setText("");
   };
 

@@ -1,13 +1,11 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
 export async function sendText(text: string) {
-  const tg = window.Telegram.WebApp;
-
-  const res = await fetch(`${API_URL}/solve-text`, {
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/solve-text`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "X-Telegram-Init-Data": tg.initData,
+      "X-Telegram-Init-Data": window.Telegram.WebApp.initData,
     },
     body: JSON.stringify({ text }),
   });
