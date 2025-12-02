@@ -54,7 +54,7 @@ export default function App() {
   if (!allowed) {
     return (
       <div className="app-container" style={{ textAlign: "center" }}>
-        <h2>🚫 Telegram не привязан</h2>
+        <h2>🚫 Telegram c вашим ID (tgId {tgId}) не привязан</h2>
         <p>Чтобы пользоваться мини-приложением:</p>
         <p>🔗 Зайдите на сайт и привяжите Telegram в профиле.</p>
       </div>
